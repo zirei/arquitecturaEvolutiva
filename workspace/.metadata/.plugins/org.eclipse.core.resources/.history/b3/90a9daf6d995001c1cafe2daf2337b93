@@ -1,0 +1,15 @@
+package com.vobi.bank.mapper;
+
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+import com.vobi.bank.domain.Users;
+import com.vobi.bank.dto.UserDTO;
+
+@Mapper
+public interface UserMapper {
+	
+	@Mapping(source ="userType.ustyId", target= "ustyId")
+	public UserDTO usetToUserDTO(Users user);
+
+}
